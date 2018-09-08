@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
+    tools:context=".LaundryUser">
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#0F0E0E"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="309dp" />
+
+    <TextView
+        android:id="@+id/TxtLayanan"
+        android:layout_width="112dp"
+        android:layout_height="24dp"
+        android:text="Pilihan Layanan:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Regular"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/TxtPakaian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KAOS,BAJU,CELANA"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <TextView
+        android:id="@+id/TxtSprei"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SPREI, BED COVER"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/TxtBantal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BANTAL, GULING"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <TextView
+        android:id="@+id/TxtTotalPrice"
+        android:layout_width="125dp"
+        android:layout_height="34dp"
+        android:text="TOTAL PRICE:"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="336dp" />
+
+    <Button
+        android:id="@+id/BtnBack"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:text="BACK"
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="458dp" />
+
+    <Button
+        android:id="@+id/BtnNext"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        tools:layout_editor_absoluteX="216dp"
+        tools:layout_editor_absoluteY="458dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#0F0E0E"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="116dp" />
+
+    <TextView
+        android:id="@+id/TxtLmaRbu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.000/kg"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <TextView
+        android:id="@+id/TxtDlpanRbu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8.000/kg"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/TxtSpluhRbu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10.000/kg"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <EditText
+        android:id="@+id/etBantal"
+        android:layout_width="41dp"
+        android:layout_height="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <EditText
+        android:id="@+id/etSprei"
+        android:layout_width="41dp"
+        android:layout_height="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="41dp"
+        android:layout_height="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="143dp" />
+
+    <TextView
+        android:id="@+id/TxtTotal"
+        android:layout_width="118dp"
+        android:layout_height="35dp"
+        android:hint="Total"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="336dp" />
+
+</android.support.constraint.ConstraintLayout>
