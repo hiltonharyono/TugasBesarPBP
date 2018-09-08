@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button buttonSignIn;
     private EditText editTextEmail;
     private EditText editTextPassword;
-    private TextView textViewSignup;
+    //private TextView textViewSignup;
 
     //firebase auth object
     private FirebaseAuth firebaseAuth;
@@ -35,13 +35,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //getting firebase auth object
+        firebaseAuth = FirebaseAuth.getInstance();
+
         //if the objects getcurrentuser method is not null
         //means user is already logged in
         if(firebaseAuth.getCurrentUser() != null){
             //close this activity
             finish();
             //opening profile activity
-            startActivity(new Intent(getApplicationContext(), LaundryUser.class));
+            startActivity(new Intent(getApplicationContext(), MenuUtama.class));
         }
 
         //initializing views
@@ -77,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //if the email and password are not empty
         //displaying a progress dialog
 
-        progressDialog.setMessage("Registering Please Wait...");
+        progressDialog.setMessage("Please Wait...");
         progressDialog.show();
 
         //logging in the user
@@ -90,7 +93,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         if(task.isSuccessful()){
                             //start the profile activity
                             finish();
-                            startActivity(new Intent(getApplicationContext(), LaundryUser.class));
+                            startActivity(new Intent(getApplicationContext(), MenuUtama.class));
+                        }
+                        else {
+                            Toast.makeText(getApplicationContext(), "Email & Password Salah", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
@@ -103,8 +109,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onClick(View v) {
-        if(v == buttonSignIn) {
+    public void onClick(View view) {
+        if(view == buttonSignIn){
             userLogin();
         }
     }

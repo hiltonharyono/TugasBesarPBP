@@ -63,7 +63,7 @@
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="wrap_content"
-        android:layout_height="21dp"
+        android:layout_height="22dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -114,16 +114,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.664" />
-<<<<<<< HEAD
-=======
-        android:onClick="Regxister"
->>>>>>> 5ad80510c0cc053d90f41f77b5e35ca2b3625379
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.196"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -139,6 +129,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.148"
-        app:srcCompat="@drawable/LogoLaundry" />
+        app:srcCompat="@drawable/logolaundry" />
 
 </android.support.constraint.ConstraintLayout>

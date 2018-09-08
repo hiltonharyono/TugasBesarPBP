@@ -22,9 +22,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText editTextEmail;
     private EditText editTextPassword;
     private Button buttonSignup;
+    private Button buttonBack;
+
     private ProgressDialog progressDialog;
+
     private FirebaseAuth firebaseAuth;
-    RegisterActivity activity;
+    //RegisterActivity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,15 +37,27 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         //initializing firebase auth object
         firebaseAuth = firebaseAuth.getInstance();
 
+        //if getCurrentUser does not returns null
+        if(firebaseAuth.getCurrentUser() != null){
+            //that means user is already logged in
+            //so close this activity
+            finish();
+
+            //and open profile activity
+            startActivity(new Intent(getApplicationContext(), MenuUtama.class));
+        }
+
+        //initializing views
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-
+        buttonBack = (Button) findViewById(R.id.btnBack);
         buttonSignup = (Button) findViewById(R.id.buttonSignup);
 
         progressDialog = new ProgressDialog(this);
 
         //attaching listener to button
         buttonSignup.setOnClickListener(this);
+        buttonBack.setOnClickListener(this);
     }
 
     private void registerUser(){
@@ -71,16 +86,15 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-
                         //checking if success
                         if(task.isSuccessful()){
-                            Toast.makeText(RegisterActivity.this,"Successfully registered",Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
-                            startActivity(intent);
+                            finish();
+                            startActivity(new Intent(getApplicationContext(), MenuUtama.class));
                         }else{
+                            //display some message here
                             Toast.makeText(RegisterActivity.this,"Registration Error",Toast.LENGTH_LONG).show();
                         }
-
+                        progressDialog.dismiss();
                     }
                 });
 
@@ -93,6 +107,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View v) {
-        registerUser();
+        if(v == buttonSignup){
+            registerUser();
+        }
+
+        if(v == buttonBack){
+            //open login activity when user taps on the already registered textview
+            startActivity(new Intent(this, MainActivity.class));
+        }
     }
 }
