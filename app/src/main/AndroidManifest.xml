@@ -20,7 +20,7 @@
         <activity android:name=".LaundryUser" />
         <activity android:name=".AboutUs" />
         <activity android:name=".Profile" />
-        <activity android:name=".Register"></activity>
+        <activity android:name=".RegisterActivity"></activity>
     </application>
 
 </manifest>

@@ -107,6 +107,7 @@
         android:background="#87CEEB"
         android:text="Register"
         android:textSize="24sp"
+        android:onClick="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.196"
