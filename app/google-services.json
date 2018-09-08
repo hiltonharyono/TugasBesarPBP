@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "97435997852",
+    "firebase_url": "https://tubes-e4baa.firebaseio.com",
+    "project_id": "tubes-e4baa",
+    "storage_bucket": "tubes-e4baa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97435997852:android:a180eb3d47361d4e",
+        "android_client_info": {
+          "package_name": "tugasbesarpbp_f_keld.com.tugasbesarpbp_f_keld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97435997852-vs1tbf0qoqan0kc4gmrsc30408iubilt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tugasbesarpbp_f_keld.com.tugasbesarpbp_f_keld",
+            "certificate_hash": "bc8dd7eba7d93a052524f114cda2624306c9ecc6"
+          }
+        },
+        {
+          "client_id": "97435997852-cdso2qtsjllv02mqe3mfpfceth5na6gu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5gOuzMc15ydYMHX-LWfG7o5S0lW4O2ME"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97435997852-cdso2qtsjllv02mqe3mfpfceth5na6gu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
