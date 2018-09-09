@@ -40,12 +40,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //if the objects getcurrentuser method is not null
         //means user is already logged in
-        if(firebaseAuth.getCurrentUser() != null){
-            //close this activity
-            finish();
-            //opening profile activity
-            startActivity(new Intent(getApplicationContext(), MenuUtama.class));
-        }
+//        if(firebaseAuth.getCurrentUser() != null){
+//            //close this activity
+//            finish();
+//            //opening profile activity
+//            startActivity(new Intent(getApplicationContext(), MenuUtama.class));
+//        }
 
         //initializing views
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
